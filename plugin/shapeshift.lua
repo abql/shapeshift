@@ -53,9 +53,9 @@ function Shapeshift(...)
 	local end_line   = vim.fn.line("'>")
 	local real_lines = vim.api.nvim_buf_get_lines(0, start_line - 1, end_line, false)
 	local depth      = 0
-	local arguments = {...}
-	local sign = arguments[1] or "="
-	local spacing = arguments[2]
+	local arguments  = {...}
+	local sign       = arguments[1] or "="
+	local spacing    = arguments[2]
 
 	for _, line in ipairs(real_lines) do
 		if depth < MaxDepth(line, sign) then

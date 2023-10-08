@@ -10,9 +10,12 @@ function MaxDepth(line, sign)
             if cursor > max_depth then
                 max_depth = cursor
             end
+			goto continue
         end
 		cursor = cursor + 1
     end
+
+	::continue::
 	return max_depth
 end
 
